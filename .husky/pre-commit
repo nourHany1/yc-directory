@@ -1,0 +1,12 @@
+#!/usr/bin/env sh
+
+echo "🔍 Running lint-staged checks..."
+npm run lint-staged || (echo "❌ lint-staged failed. Please fix the issues and try again." && exit 1)
+
+echo "📝 Checking code format..."
+npm run check-format || (echo "❌ Code formatting issues found. Please run 'npm run format' and commit again." && exit 1)
+
+echo "🔎 Running lint checks..."
+npm run check-lint || (echo "❌ ESLint issues found. Please run 'npm run lint' and to fix run 'npx eslint . --fix' and commit again." && exit 1)
+
+echo "✅ All checks passed! 🚀✨ Preparing to commit... 🔐"
