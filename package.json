@@ -10,7 +10,6 @@
     "predev": "npm run typegen",
     "prebuild": "npm run typegen",
     "typegen": "sanity schema extract --path=./src/sanity/schema.json && sanity typegen generate",
-    "prepare": "husky",
     "check-lint": "eslint .",
     "lint-staged": "lint-staged",
     "check-format": "prettier --check .",
