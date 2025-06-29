@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "predev": "npm run typegen",
-    "prebuild": "[ \"$VERCEL\" != \"1\" ] && npm run typegen",
+    "prebuild": "node -e \"if (process.env.VERCEL !== '1') require('child_process').execSync('npm run typegen', {stdio: 'inherit'})\"",
     "typegen": "sanity schema extract --path=./src/sanity/schema.json && sanity typegen generate --schema=./src/sanity/schema.json",
     "check-lint": "eslint .",
     "lint-staged": "lint-staged",
