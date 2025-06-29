@@ -14,7 +14,8 @@
     "check-lint": "eslint .",
     "lint-staged": "lint-staged",
     "check-format": "prettier --check .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "vercel-build": "npm install --legacy-peer-deps && next build"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
@@ -63,7 +64,7 @@
     "eslint-config-next": "15.3.4",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
-    "prettier": "^3.6.2",
+    "prettier": "^2.8.8",
     "sanity-codegen": "^0.9.8",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.4",

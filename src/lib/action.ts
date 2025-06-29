@@ -11,11 +11,11 @@ export async function createPitch(form: FormData, pitch: string) {
       JSON.stringify({
         status: "ERROR",
         error: "Not siged in",
-      }),
+      })
     );
 
   const { title, description, category, link } = Object.fromEntries(
-    Array.from(form).filter(([key]) => key !== "pitch"),
+    Array.from(form).filter(([key]) => key !== "pitch")
   );
 
   const slug = slugify(title as string, { lower: true, strict: true });
@@ -27,7 +27,7 @@ export async function createPitch(form: FormData, pitch: string) {
     if (!authorId || !authorId.startsWith("author-")) {
       const authorDoc = await writeClient.fetch(
         '*[_type == "author" && email == $email][0]._id',
-        { email: session.user?.email },
+        { email: session.user?.email }
       );
       authorId = authorDoc;
     }
@@ -60,7 +60,7 @@ export async function createPitch(form: FormData, pitch: string) {
     }
 
     return JSON.parse(
-      JSON.stringify({ ...result, error: "", status: "SUCCESS" }),
+      JSON.stringify({ ...result, error: "", status: "SUCCESS" })
     );
   } catch (error) {
     console.log("Error creating pitch:", error);
@@ -68,7 +68,7 @@ export async function createPitch(form: FormData, pitch: string) {
       JSON.stringify({
         error: JSON.stringify(error),
         status: "ERROR",
-      }),
+      })
     );
   }
 }

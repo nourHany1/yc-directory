@@ -38,7 +38,7 @@ function StartupForm() {
 
   const handleFormSubmit = async (
     previousState: FormState,
-    formData: FormData,
+    formData: FormData
   ): Promise<FormState> => {
     try {
       const formValues: FormValues = {
