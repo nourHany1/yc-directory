@@ -1,3 +1,5 @@
+"use client";
+
 import { formatDate } from "@/lib/formateDate";
 import { EyeIcon } from "lucide-react";
 import Image from "next/image";
