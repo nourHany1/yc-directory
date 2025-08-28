@@ -23,10 +23,12 @@
     ]
   },
   "dependencies": {
+    "@floating-ui/react-dom": "^2.1.6",
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-slot": "^1.2.3",
     "@sanity/icons": "^3.7.4",
     "@sanity/image-url": "^1.1.0",
+    "@sanity/ui": "^3.0.8",
     "@sanity/vision": "^3.95.0",
     "@sentry/nextjs": "^9.33.0",
     "@tailwindcss/typography": "^0.5.16",
@@ -34,6 +36,7 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "easymde": "^2.20.0",
+    "framer-motion": "^12.23.12",
     "lucide-react": "^0.523.0",
     "markdown-it": "^14.1.0",
     "next": "15.3.4",
@@ -42,6 +45,7 @@
     "next-themes": "^0.4.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-is": "^19.1.1",
     "sanity": "^3.95.0",
     "sanity-plugin-markdown": "^5.1.1",
     "server-only": "^0.0.1",
