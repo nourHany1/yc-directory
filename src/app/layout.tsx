@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import Navbar from "@/components/global/Navbar";
+import Navbar from "../components/global/Navbar";
 import "easymde/dist/easymde.min.css";
 
 export const metadata: Metadata = {
