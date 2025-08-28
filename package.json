@@ -14,7 +14,10 @@
     "lint-staged": "lint-staged",
     "check-format": "prettier --check .",
     "format": "prettier --write .",
-    "vercel-build": "npm install --legacy-peer-deps && next build"
+    "vercel-build": "npm install --legacy-peer-deps --force && next build"
+  },
+  "overrides": {
+    "@sanity/ui": "2.16.7"
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
