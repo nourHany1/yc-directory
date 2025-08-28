@@ -59,11 +59,14 @@ function StartupCard({ post }: { post: StartupCardType }) {
         <p className="startup-card_desc">{description}</p>
 
         <Image
-          src={typeof image === "string" ? image : ""}
+          src={typeof image === "string" ? image : "/fallback-image.png"}
           alt="placeholder"
           width={100}
           height={100}
-          className="startup-card_img "
+          className="startup-card_img"
+          onError={(e) => {
+            e.currentTarget.src = "/fallback-image.png";
+          }}
         />
       </Link>
 
