@@ -17,7 +17,9 @@
     "vercel-build": "npm install --legacy-peer-deps --force && next build"
   },
   "overrides": {
-    "@sanity/ui": "2.16.7"
+    "@sanity/ui": {
+      "exact": "2.16.7"
+    }
   },
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
